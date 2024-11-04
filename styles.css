@@ -1,0 +1,86 @@
+*{
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f4f8;
+}
+
+.game {
+  width: 500px;
+  height: 200px;
+  border: 2px solid #333;
+  background-color: #fff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+#character{
+  width: 20px;
+  height: 50px;
+  background-color: #7ce69a;;
+  position:relative;
+  top: 150px;
+}
+.animate {
+  animation: jump 0.6s linear;
+}
+
+@keyframes jump {
+  0% { top: 150px; }
+  30% { top: 50px; }
+  70% { top: 50px; }
+  100% { top: 150px; }
+}
+
+
+#block{
+  background-color: #c95f8d;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 130px;
+  left: 500px;
+  animation: block 3s infinite linear;
+}
+@keyframes block{
+  0%{left: 500px}
+  100%{left: -20px}
+}
+
+#bonus {
+  width: 20px;
+  height: 20px;
+  background-color: gold;
+  position: relative;
+  top: 110px;
+  left: 500px;
+  clip-path: polygon(
+          50% 0%,
+          61% 35%,
+          98% 35%,
+          68% 57%,
+          79% 91%,
+          50% 70%,
+          21% 91%,
+          32% 57%,
+          2% 35%,
+          39% 35%
+  );
+  animation: bonus 2s infinite linear;
+}
+
+@keyframes bonus {
+  0% { left: 500px; }
+  100% { left: -20px; }
+}
+
+p{
+  text-align: center;
+}
